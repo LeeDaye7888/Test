@@ -1,74 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.board.BoardWriteActivity"
+    android:orientation="vertical">
+
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.board.BoardWriteActivity"
-        android:orientation="vertical">
+        android:layout_height="60dp">
 
-        <LinearLayout
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="60dp">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="게시글 작성"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:background="#000000"/>
-
-        <EditText
-            android:id="@+id/titleArea"
-            android:layout_margin="10dp"
-            android:layout_width="match_parent"
-            android:background="@android:color/transparent"
-            android:hint="제목을 입력해주세요"
-            android:layout_height="60dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:background="#000000"/>
-
-
-        <EditText
-            android:id="@+id/contentArea"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_margin="10dp"
-            android:background="@android:color/transparent"
-            android:hint="내용을 입력해주세요" />
-
-        <LinearLayout
-            android:layout_marginTop="50dp"
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:background="#000000"/>
-
-
-        <Button
-            android:id="@+id/writeBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/background_radius"
-            android:text="등록"
-            android:textColor="#FFFFFF"
-            android:textSize="17sp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="게시글 작성"
+            android:textColor="@color/black"
+            android:textSize="18sp"
             android:textStyle="bold" />
-
     </LinearLayout>
-</layout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#000000"/>
+
+    <EditText
+        android:id="@+id/titleArea"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:background="@android:color/transparent"
+        android:hint="제목을 입력해주세요"
+        android:layout_height="60dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#000000"/>
+
+
+    <EditText
+        android:id="@+id/contentArea"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="10dp"
+        android:background="@android:color/transparent"
+        android:hint="내용을 입력해주세요" />
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#000000"/>
+
+
+    <Button
+        android:id="@+id/writeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/background_radius"
+        android:text="등록"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

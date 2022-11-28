@@ -1,7 +1,6 @@
 package com.example.test.ui.board
 
 import android.content.Intent
-import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -9,8 +8,6 @@ import android.widget.TextView
 import android.widget.Toast
 import com.example.test.R
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.ktx.Firebase
-import com.google.firebase.storage.ktx.storage
 
 
 class LoginAcitivty : AppCompatActivity() {
@@ -18,6 +15,7 @@ class LoginAcitivty : AppCompatActivity() {
     lateinit var email: TextView
     lateinit var password: TextView
     lateinit var btn_login : Button
+    lateinit var btn_sign : Button
 
     lateinit var auth: FirebaseAuth
 
@@ -30,6 +28,7 @@ class LoginAcitivty : AppCompatActivity() {
         email = findViewById(R.id.editText_email)
         password = findViewById(R.id.editText_pw)
         btn_login = findViewById(R.id.btn_login)
+        btn_sign = findViewById(R.id.btn_sign)
 
 
         btn_login.setOnClickListener({
@@ -37,6 +36,9 @@ class LoginAcitivty : AppCompatActivity() {
 //             createAccount(email.text.toString(), password.text.toString()) 회원가입
         })
 
+        btn_sign.setOnClickListener({
+             createAccount(email.text.toString(), password.text.toString())
+        })
 
 
 
@@ -97,6 +99,7 @@ class LoginAcitivty : AppCompatActivity() {
                         ).show()
 
                         moveMainPage(auth?.currentUser?.email)
+                        finish()
                     } else {
                         Toast.makeText(
                             baseContext, "로그인에 실패",

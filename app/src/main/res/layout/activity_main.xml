@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F6F6F6"
     tools:context=".ui.board.MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -12,32 +13,35 @@
         android:layout_height="60dp"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/facebook_main2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:src="@drawable/control"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/imageView2"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@drawable/facebook_main2"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/boardListView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+
     <LinearLayout
         android:id="@+id/linearLayout6"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="#999999"
+        android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
     </LinearLayout>
@@ -45,10 +49,12 @@
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="70dp"
         android:orientation="horizontal"
         android:padding="4dp"
         android:weightSum="2"
+        android:background="@color/white"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -62,8 +68,9 @@
             <ImageView
                 android:id="@+id/menu_board"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                app:srcCompat="@drawable/ic_baseline_dehaze_24" />
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_dehaze_24" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -71,6 +78,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text="게시판"
+                android:textColor="#9A9999"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -83,9 +91,10 @@
             <ImageView
                 android:id="@+id/menu_friend"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="#FFFFFF"
-                app:srcCompat="@drawable/bottom_my" />
+                android:layout_height="40dp"
+
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_person_24" />
 
             <TextView
                 android:id="@+id/textView"
@@ -93,33 +102,22 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text="친구"
+                android:textColor="#9A9999"
                 android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-
-        android:layout_width="409dp"
-        android:layout_height="589dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="81dp"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
-
     <ImageView
         android:id="@+id/board_write"
-        android:layout_width="97dp"
-        android:layout_height="100dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="56dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="18dp"
+        android:elevation="10dp"
+        android:src="@drawable/write"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/write" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
